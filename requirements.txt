@@ -2,3 +2,4 @@ yfinance
 pandas
 openpyxl
 pytest
+streamlit
