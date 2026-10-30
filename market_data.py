@@ -108,8 +108,8 @@ def main():
         macro.to_csv(out / "macro.csv", index=False)
     else:
         with pd.ExcelWriter(out / "market_snapshot.xlsx") as xw:
-            comps.to_excel(xw, "Comps", index=False)
-            macro.to_excel(xw, "Macro", index=False)
+            comps.to_excel(xw, sheet_name="Comps", index=False)
+            macro.to_excel(xw, sheet_name="Macro", index=False)
     print(comps.to_string(index=False), "\n")
     print(macro.to_string(index=False))
     print(f"\nSaved to {out}/")
